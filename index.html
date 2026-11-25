@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dedicated Mac mini hosting for developers. Remote access, dependable performance and a machine that's yours.">
+  <meta name="description" content="ultraAI: dedicated Mac mini hosting for developers. Remote access, dependable performance and a machine that is yours.">
   <meta name="theme-color" content="#090b12">
-  <title>MacRent — Dedicated Mac mini, ready when you are</title>
+  <title>ultraAI — Dedicated Mac mini, ready when you are</title>
   <style>
     :root{color-scheme:dark;--bg:#090b12;--panel:#121622;--panel2:#171d2b;--text:#f5f7fb;--muted:#aab3c5;--line:rgba(255,255,255,.1);--blue:#8db5ff;--green:#a6edc1;--max:1120px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% 0%,#1a2a4b 0,transparent 36%),var(--bg);color:var(--text);font:16px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -15,57 +15,110 @@
     .device{position:relative;min-height:380px;display:grid;place-items:center}.device-photo{display:block;width:min(100%,520px);height:auto;object-fit:contain;filter:drop-shadow(0 28px 32px rgba(0,0,0,.38));border-radius:18px}.photo-gallery{padding:18px 0 76px}.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px}.gallery-card{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.gallery-card img{display:block;width:100%;height:220px;object-fit:cover;background:#e7e7e7}.gallery-card figcaption{padding:13px 16px;color:var(--muted);font-size:.86rem}.photo-credit{margin:12px 0 0;color:#8490a5;font-size:.76rem}.photo-credit a{color:var(--blue);text-decoration:underline}
     .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.9rem}.trust span:before{content:"✓";color:var(--green);margin-right:9px}
     section{padding:82px 0}.section-head{max-width:650px;margin-bottom:38px}.kicker{color:var(--blue);font-size:.8rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase}h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.1;letter-spacing:-.045em;margin:12px 0}.sub{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature,.pricecard,.faq details{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px}.feature{padding:24px}.icon{width:42px;height:42px;display:grid;place-items:center;background:#263653;border-radius:12px;color:#b8d0ff;font-size:1.25rem}.feature h3{margin:18px 0 7px;font-size:1.06rem}.feature p{margin:0;color:var(--muted);font-size:.92rem}
-    .pricing{display:grid;grid-template-columns:1fr .85fr;gap:45px;align-items:center}.pricecard{padding:32px}.plan{color:var(--green);font-size:.82rem;font-weight:750;text-transform:uppercase;letter-spacing:.1em}.price{font-size:3.5rem;font-weight:850;letter-spacing:-.06em;margin:10px 0 0}.price small{font-size:1rem;color:var(--muted);font-weight:500;letter-spacing:0}.discount{display:inline-block;margin:12px 0 0;padding:9px 12px;border:1px solid rgba(166,237,193,.3);border-radius:10px;background:rgba(166,237,193,.08);color:var(--green);font-weight:700;font-size:.92rem}.includes{list-style:none;padding:0;margin:24px 0;display:grid;gap:12px;color:var(--muted)}.includes li:before{content:"✓";color:var(--green);margin-right:10px}.pricecard .btn{width:100%}.note{font-size:.8rem;color:#8792a6;margin-top:14px}
+    .pricing{display:grid;grid-template-columns:1fr .85fr;gap:45px;align-items:center}.pricecard{padding:32px}.plan{color:var(--green);font-size:.82rem;font-weight:750;text-transform:uppercase;letter-spacing:.1em}.price{font-size:3.5rem;font-weight:850;letter-spacing:-.06em;margin:10px 0 0}.price small{font-size:1rem;color:var(--muted);font-weight:500;letter-spacing:0}.includes{list-style:none;padding:0;margin:24px 0;display:grid;gap:12px;color:var(--muted)}.includes li:before{content:"✓";color:var(--green);margin-right:10px}.pricecard .btn{width:100%}.note{font-size:.8rem;color:#8792a6;margin-top:14px}
     .faq{max-width:800px}.faq details{padding:18px 20px;margin:12px 0}.faq summary{cursor:pointer;font-weight:700}.faq details p{color:var(--muted);margin-bottom:0}
     footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:850px){.hero,.pricing{grid-template-columns:1fr}.hero{padding-top:65px;gap:20px}.device{min-height:300px}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-card:first-child{grid-column:1/-1}.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.navlinks{display:none}.hero{padding:55px 0}.gallery-grid{grid-template-columns:1fr}.gallery-card:first-child{grid-column:auto}.gallery-card img{height:auto;max-height:260px;object-fit:contain}.grid{grid-template-columns:1fr}.trust{display:grid;grid-template-columns:1fr 1fr}.pricecard{padding:24px}section{padding:62px 0}}
+  
+    .navactions{display:flex;align-items:center;gap:10px}
+    .langbtn{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:9px 15px;font:inherit;font-size:.86rem;cursor:pointer;transition:.2s;line-height:1;white-space:nowrap}
+    .langbtn:hover{color:var(--text);border-color:var(--blue)}
+    html[lang="zh-CN"] body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif}
+    html[lang="zh-CN"] h1{letter-spacing:-.025em;line-height:1.1}
+    html[lang="zh-CN"] h2{letter-spacing:0}
+    html[lang="zh-CN"] .eyebrow,html[lang="zh-CN"] .kicker,html[lang="zh-CN"] .plan{letter-spacing:.05em;text-transform:none}
+    html[lang="zh-CN"] .lead,html[lang="zh-CN"] .sub{line-height:1.75}
   </style>
 </head>
 <body>
   <header class="wrap nav">
-    <a class="brand" href="#" aria-label="MacRent home">Mac<span>Rent</span></a>
-    <nav class="navlinks" aria-label="Main navigation"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
-    <a class="btn secondary" href="#pricing">View plan</a>
+    <a class="brand" href="#" aria-label="ultraAI home">ultra<span>AI</span></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#features" data-en="Features" data-zh="功能">Features</a><a href="#pricing" data-en="Pricing" data-zh="价格">Pricing</a><a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a></nav>
+    <div class="navactions"><button id="langToggle" class="langbtn" type="button" aria-label="Switch language">中文</button><a class="btn secondary" href="#pricing" data-en="View plan" data-zh="查看方案">View plan</a></div>
   </header>
   <main>
     <div class="wrap hero">
       <div>
-        <div class="eyebrow"><i class="dot"></i> Your dedicated Mac in the cloud</div>
-        <h1>Rent a Mac.<br><span class="gradient">Build without limits.</span></h1>
-        <p class="lead">A dedicated Mac mini for development, builds and remote workflows. Get the convenience of a hosted Mac without sharing hardware with other customers.</p>
-        <div class="actions"><a class="btn" href="#pricing">Explore the plan</a><a class="btn secondary" href="#features">How it works</a></div>
-        <p class="fine">Designed for developers, teams and continuous integration workflows.</p>
+        <div class="eyebrow"><i class="dot"></i> <span data-en="Your dedicated Mac in the cloud" data-zh="云端专属 Mac">Your dedicated Mac in the cloud</span></div>
+        <h1 data-en-html="Rent a Mac.<br><span class='gradient'>Build without limits.</span>" data-zh-html="租一台 Mac。<br><span class='gradient'>不受限制地构建。</span>">Rent a Mac.<br><span class="gradient">Build without limits.</span></h1>
+        <p class="lead" data-en="A dedicated Mac mini for development, builds and remote workflows. Get the convenience of a hosted Mac without sharing hardware with other customers." data-zh="一台专属的 Mac mini，用于开发、构建与远程工作。享受托管 Mac 的便利，同时无需与其他客户共享硬件。">A dedicated Mac mini for development, builds and remote workflows. Get the convenience of a hosted Mac without sharing hardware with other customers.</p>
+        <div class="actions"><a class="btn" href="#pricing" data-en="Explore the plan" data-zh="了解方案">Explore the plan</a><a class="btn secondary" href="#features" data-en="How it works" data-zh="运作方式">How it works</a></div>
+        <p class="fine" data-en="Designed for developers, teams and continuous integration workflows." data-zh="专为开发者、团队与持续集成流程设计。">Designed for developers, teams and continuous integration workflows.</p>
       </div>
       <div class="device" aria-label="Illustration of a Mac desktop computer">
         <div class="glow"></div><div class="mac"><div class="screen"><div class="screenlogo">⌘</div></div><div class="chin"></div><div class="stand"></div><div class="base"></div></div>
       </div>
     </div>
-    <section class="wrap photo-gallery" aria-label="Mac mini product photos">\n      <div class="section-head"><div class="kicker">The hardware</div><h2>Small footprint. Serious capability.</h2><p class="sub">A closer look at the Mac mini design, ports and real-world desk setup.</p></div>\n      <div class="gallery-grid">\n        <figure class="gallery-card"><img src="https://images.apple.com/v/mac-mini/ab/images/overview/highlights/highlights_design__b5v3zy2alo5e_xlarge.jpg" alt="Mac mini in a desktop setup with display and accessories" loading="lazy"><figcaption>Compact desktop setup</figcaption></figure>\n        <figure class="gallery-card"><img src="https://images.apple.com/v/mac-mini/ab/images/overview/design/design_pf__c25gukz0vwgi_large.jpg" alt="Mac mini front ports" loading="lazy"><figcaption>Front ports</figcaption></figure>\n        <figure class="gallery-card"><img src="https://images.apple.com/v/mac-mini/ab/images/overview/design/design_pb__cxvqbmm5dfcm_large.jpg" alt="Mac mini rear ports" loading="lazy"><figcaption>Rear connectivity</figcaption></figure>\n      </div>\n      <p class="photo-credit">Product images: <a href="https://www.apple.com/au/mac-mini/" target="_blank" rel="noopener noreferrer">Apple Mac mini</a>. Apple and Mac mini are trademarks of Apple Inc.</p>\n    </section>\n    <div class="wrap trust"><span>Dedicated physical machine</span><span>Remote access</span><span>Developer-ready workflows</span><span>Monthly plan</span></div>
+    <section class="wrap photo-gallery" aria-label="Mac mini product photos">
+      <div class="section-head"><div class="kicker" data-en="The hardware" data-zh="硬件">The hardware</div><h2 data-en="Small footprint. Serious capability." data-zh="体积小巧，实力不凡。">Small footprint. Serious capability.</h2><p class="sub" data-en="A closer look at the Mac mini design, ports and real-world desk setup." data-zh="近距离了解 Mac mini 的设计、接口与真实桌面配置。">A closer look at the Mac mini design, ports and real-world desk setup.</p></div>
+      <div class="gallery-grid">
+        <figure class="gallery-card"><img src="https://images.apple.com/v/mac-mini/ab/images/overview/highlights/highlights_design__b5v3zy2alo5e_xlarge.jpg" alt="Mac mini in a desktop setup with display and accessories" data-en-alt="Mac mini in a desktop setup with display and accessories" data-zh-alt="Mac mini 搭配显示器与配件的桌面配置" loading="lazy"><figcaption data-en="Compact desktop setup" data-zh="紧凑的桌面配置">Compact desktop setup</figcaption></figure>
+        <figure class="gallery-card"><img src="https://images.apple.com/v/mac-mini/ab/images/overview/design/design_pf__c25gukz0vwgi_large.jpg" alt="Mac mini front ports" data-en-alt="Mac mini front ports" data-zh-alt="Mac mini 前置接口" loading="lazy"><figcaption data-en="Front ports" data-zh="前置接口">Front ports</figcaption></figure>
+        <figure class="gallery-card"><img src="https://images.apple.com/v/mac-mini/ab/images/overview/design/design_pb__cxvqbmm5dfcm_large.jpg" alt="Mac mini rear ports" data-en-alt="Mac mini rear ports" data-zh-alt="Mac mini 后置接口" loading="lazy"><figcaption data-en="Rear connectivity" data-zh="后置连接">Rear connectivity</figcaption></figure>
+      </div>
+      <p class="photo-credit" data-en-html="Product images: <a href='https://www.apple.com/au/mac-mini/' target='_blank' rel='noopener noreferrer'>Apple Mac mini</a>. Apple and Mac mini are trademarks of Apple Inc." data-zh-html="产品图片：<a href='https://www.apple.com/au/mac-mini/' target='_blank' rel='noopener noreferrer'>Apple Mac mini</a>。Apple 与 Mac mini 是 Apple Inc. 的商标。">Product images: <a href="https://www.apple.com/au/mac-mini/" target="_blank" rel="noopener noreferrer">Apple Mac mini</a>. Apple and Mac mini are trademarks of Apple Inc.</p>
+    </section>
+    <div class="wrap trust"><span data-en="Dedicated physical machine" data-zh="专属物理机">Dedicated physical machine</span><span data-en="Remote access" data-zh="远程访问">Remote access</span><span data-en="Developer-ready workflows" data-zh="开发者就绪的工作流">Developer-ready workflows</span><span data-en="Monthly plan" data-zh="按月订阅">Monthly plan</span></div>
     <section class="wrap" id="features">
-      <div class="section-head"><div class="kicker">Why MacRent</div><h2>Your Mac. Your environment. Your workflow.</h2><p class="sub">A straightforward way to access a dedicated Mac remotely for the work that depends on macOS.</p></div>
+      <div class="section-head"><div class="kicker" data-en="Why ultraAI" data-zh="为什么选择 ultraAI">Why ultraAI</div><h2 data-en="Your Mac. Your environment. Your workflow." data-zh="你的 Mac。你的环境。你的工作流。">Your Mac. Your environment. Your workflow.</h2><p class="sub" data-en="A straightforward way to access a dedicated Mac remotely for the work that depends on macOS." data-zh="以直接的方式远程访问一台专属 Mac，处理那些必须依赖 macOS 的工作。">A straightforward way to access a dedicated Mac remotely for the work that depends on macOS.</p></div>
       <div class="grid">
-        <article class="feature"><div class="icon">▣</div><h3>Dedicated hardware</h3><p>A physical Mac mini allocated to your use, rather than a shared virtual desktop.</p></article>
-        <article class="feature"><div class="icon">⌘</div><h3>Remote access</h3><p>Connect to your development environment remotely using supported access tools.</p></article>
-        <article class="feature"><div class="icon">◷</div><h3>Available around the clock</h3><p>Keep long-running tasks and development workflows moving beyond your local workday.</p></article>
-        <article class="feature"><div class="icon">⌘</div><h3>Built for developers</h3><p>Use macOS tools for coding, compiling, testing and other compatible workflows.</p></article>
+        <article class="feature"><div class="icon">▣</div><h3 data-en="Dedicated hardware" data-zh="专属硬件">Dedicated hardware</h3><p data-en="A physical Mac mini allocated to your use, rather than a shared virtual desktop." data-zh="一台物理 Mac mini 专供你使用，而不是共享的虚拟桌面。">A physical Mac mini allocated to your use, rather than a shared virtual desktop.</p></article>
+        <article class="feature"><div class="icon">⌘</div><h3 data-en="Remote access" data-zh="远程访问">Remote access</h3><p data-en="Connect to your development environment remotely using supported access tools." data-zh="使用受支持的访问工具，远程连接你的开发环境。">Connect to your development environment remotely using supported access tools.</p></article>
+        <article class="feature"><div class="icon">◷</div><h3 data-en="Available around the clock" data-zh="全天候可用">Available around the clock</h3><p data-en="Keep long-running tasks and development workflows moving beyond your local workday." data-zh="在你本地的工作时间之外，长时间运行的任务与开发流程依然持续进行。">Keep long-running tasks and development workflows moving beyond your local workday.</p></article>
+        <article class="feature"><div class="icon">⌘</div><h3 data-en="Built for developers" data-zh="为开发者打造">Built for developers</h3><p data-en="Use macOS tools for coding, compiling, testing and other compatible workflows." data-zh="使用 macOS 工具进行编码、编译、测试及其他兼容的工作流。">Use macOS tools for coding, compiling, testing and other compatible workflows.</p></article>
       </div>
     </section>
     <section class="wrap" id="pricing">
       <div class="pricing">
-        <div><div class="kicker">Simple monthly pricing</div><h2>One Mac. One monthly price.</h2><p class="sub">A clear starting point for individuals and teams that need a dedicated remote Mac. Contact us to confirm hardware specifications, availability and setup before ordering.</p></div>
-        <div class="pricecard"><div class="plan">Dedicated Mac plan</div><div class="price">$700 <small>/ month</small></div><p class="discount">Save 5% when you subscribe for 3 months or longer — just $665/month.</p><ul class="includes"><li>Dedicated Mac mini allocation</li><li>Remote development access</li><li>Suitable for macOS development workflows</li><li>Setup and onboarding coordination</li><li>5% discount for subscriptions of 3 months or more</li></ul><a class="btn" href="mailto:hello@example.com?subject=MacRent%20enquiry">Enquire about availability</a><p class="note">Discount applies to subscription periods of 3 months or longer. Price and hardware configuration are subject to confirmation. Replace this contact address before publishing.</p></div>
+        <div><div class="kicker" data-en="Simple monthly pricing" data-zh="简单的按月定价">Simple monthly pricing</div><h2 data-en="One Mac. One monthly price." data-zh="一台 Mac，一个月费。">One Mac. One monthly price.</h2><p class="sub" data-en="A clear starting point for individuals and teams that need a dedicated remote Mac. Contact us to confirm hardware specifications, availability and setup before ordering." data-zh="为需要专属远程 Mac 的个人与团队提供清晰的起点。下单前请与我们确认硬件规格、可用性与配置细节。">A clear starting point for individuals and teams that need a dedicated remote Mac. Contact us to confirm hardware specifications, availability and setup before ordering.</p></div>
+        <div class="pricecard"><div class="plan" data-en="Dedicated Mac plan" data-zh="专属 Mac 方案">Dedicated Mac plan</div><div class="price" data-en-html="$700 <small>/ month</small>" data-zh-html="$700 <small>/ 月</small>">$700 <small>/ month</small></div><ul class="includes"><li data-en="Dedicated Mac mini allocation" data-zh="专属 Mac mini 分配">Dedicated Mac mini allocation</li><li data-en="Remote development access" data-zh="远程开发访问">Remote development access</li><li data-en="Suitable for macOS development workflows" data-zh="适用于 macOS 开发工作流">Suitable for macOS development workflows</li><li data-en="Setup and onboarding coordination" data-zh="配置与上手协助">Setup and onboarding coordination</li></ul><a class="btn" href="mailto:suppert2026@hotmail.com?subject=ultraAI%20enquiry">Enquire about availability</a><p class="note" data-en="Price and hardware configuration are subject to confirmation." data-zh="价格与硬件配置以最终确认为准。">Price and hardware configuration are subject to confirmation.</p></div>
       </div>
     </section>
     <section class="wrap faq" id="faq">
-      <div class="section-head"><div class="kicker">Questions</div><h2>Frequently asked questions</h2></div>
-      <details><summary>Is this a dedicated physical Mac?</summary><p>The offering is intended to provide a dedicated physical Mac mini. Confirm the exact machine, configuration and allocation terms with us before ordering.</p></details>
-      <details><summary>How do I connect?</summary><p>Remote connection options and access instructions will be provided during setup. The available method depends on your network and the agreed configuration.</p></details>
-      <details><summary>Can I use it for Xcode and iOS builds?</summary><p>macOS development workflows may be supported, subject to the actual Mac hardware, installed software, Apple developer requirements and applicable licence terms. Confirm your workload before subscribing.</p></details>
-      <details><summary>How do I get started?</summary><p>Send an enquiry with your intended workload and preferred start date. We will confirm availability, specifications, pricing and setup details.</p></details>
+      <div class="section-head"><div class="kicker" data-en="Questions" data-zh="疑问解答">Questions</div><h2 data-en="Frequently asked questions" data-zh="常见问题">Frequently asked questions</h2></div>
+      <details><summary data-en="Is this a dedicated physical Mac?" data-zh="这是专属的物理 Mac 吗？">Is this a dedicated physical Mac?</summary><p data-en="The offering is intended to provide a dedicated physical Mac mini. Confirm the exact machine, configuration and allocation terms with us before ordering." data-zh="本服务旨在提供一台专属的物理 Mac mini。下单前请与我们确认具体的机器、配置与分配条款。">The offering is intended to provide a dedicated physical Mac mini. Confirm the exact machine, configuration and allocation terms with us before ordering.</p></details>
+      <details><summary data-en="How do I connect?" data-zh="如何连接？">How do I connect?</summary><p data-en="Remote connection options and access instructions will be provided during setup. The available method depends on your network and the agreed configuration." data-zh="配置阶段会提供远程连接方式与访问说明。可用的方式取决于你的网络环境与约定的配置。">Remote connection options and access instructions will be provided during setup. The available method depends on your network and the agreed configuration.</p></details>
+      <details><summary data-en="Can I use it for Xcode and iOS builds?" data-zh="可以用于 Xcode 与 iOS 构建吗？">Can I use it for Xcode and iOS builds?</summary><p data-en="macOS development workflows may be supported, subject to the actual Mac hardware, installed software, Apple developer requirements and applicable licence terms. Confirm your workload before subscribing." data-zh="在符合实际 Mac 硬件、已安装软件、Apple 开发者要求与适用许可条款的前提下，可支持 macOS 开发工作流。订阅前请先确认你的工作负载。">macOS development workflows may be supported, subject to the actual Mac hardware, installed software, Apple developer requirements and applicable licence terms. Confirm your workload before subscribing.</p></details>
+      <details><summary data-en="How do I get started?" data-zh="如何开始？">How do I get started?</summary><p data-en="Send an enquiry with your intended workload and preferred start date. We will confirm availability, specifications, pricing and setup details." data-zh="发送咨询，说明你计划的工作负载与期望开始日期。我们会确认可用性、规格、价格与配置细节。">Send an enquiry with your intended workload and preferred start date. We will confirm availability, specifications, pricing and setup details.</p></details>
     </section>
   </main>
-  <footer><div class="wrap foot"><div><a class="brand" href="#">Mac<span>Rent</span></a><div>Dedicated Mac hosting for development workflows.</div></div><div>© <span id="year"></span> MacRent. All rights reserved.<br><span>Mac mini, macOS and Xcode are trademarks of Apple Inc. MacRent is not affiliated with Apple Inc.</span></div></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer><div class="wrap foot"><div><a class="brand" href="#">ultra<span>AI</span></a><div data-en="Dedicated Mac hosting for development workflows." data-zh="面向开发工作流的专属 Mac 托管。">Dedicated Mac hosting for development workflows.</div></div><div>© <span id="year"></span> ultraAI. <span data-en="All rights reserved." data-zh="保留所有权利。">All rights reserved.</span><br><span data-en="Mac mini, macOS and Xcode are trademarks of Apple Inc. ultraAI is not affiliated with Apple Inc." data-zh="Mac mini、macOS 与 Xcode 是 Apple Inc. 的商标。ultraAI 与 Apple Inc. 无关联。">Mac mini, macOS and Xcode are trademarks of Apple Inc. ultraAI is not affiliated with Apple Inc.</span></div></div></footer>
+  <script>
+  (function(){
+    var LS = 'ultraai-lang';
+    function pick(){
+      try { var s = localStorage.getItem(LS); if (s === 'zh' || s === 'en') return s; } catch(e){}
+      var n = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      return n.indexOf('zh') === 0 ? 'zh' : 'en';
+    }
+    function apply(lang){
+      var zh = lang === 'zh';
+      document.documentElement.setAttribute('lang', zh ? 'zh-CN' : 'en');
+      document.title = zh ? 'ultraAI — 专属 Mac mini，随时可用' : 'ultraAI — Dedicated Mac mini, ready when you are';
+      var md = document.querySelector('meta[name=description]');
+      if (md) md.setAttribute('content', zh
+        ? 'ultraAI：面向开发者的专属 Mac mini 托管。远程访问、稳定性能，一台真正属于你的机器。'
+        : 'ultraAI: dedicated Mac mini hosting for developers. Remote access, dependable performance and a machine that is yours.');
+      var i, el, v;
+      var a1 = document.querySelectorAll('[data-en]');
+      for (i = 0; i < a1.length; i++) { el = a1[i]; v = zh ? el.getAttribute('data-zh') : el.getAttribute('data-en'); if (v !== null) el.textContent = v; }
+      var a2 = document.querySelectorAll('[data-en-html]');
+      for (i = 0; i < a2.length; i++) { el = a2[i]; v = zh ? el.getAttribute('data-zh-html') : el.getAttribute('data-en-html'); if (v !== null) el.innerHTML = v; }
+      var a3 = document.querySelectorAll('[data-en-alt]');
+      for (i = 0; i < a3.length; i++) { el = a3[i]; v = zh ? el.getAttribute('data-zh-alt') : el.getAttribute('data-en-alt'); if (v !== null) el.setAttribute('alt', v); }
+      var b = document.getElementById('langToggle');
+      if (b) { b.textContent = zh ? 'English' : '中文'; b.setAttribute('aria-label', zh ? 'Switch to English' : '切换到中文'); }
+      try { localStorage.setItem(LS, lang); } catch(e){}
+    }
+    apply(pick());
+    var btn = document.getElementById('langToggle');
+    if (btn) btn.addEventListener('click', function(){
+      apply(document.documentElement.getAttribute('lang') === 'zh-CN' ? 'en' : 'zh');
+    });
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+  </script>
 </body>
 </html>
