@@ -29,12 +29,31 @@
     html[lang="zh-CN"] h2{letter-spacing:0}
     html[lang="zh-CN"] .eyebrow,html[lang="zh-CN"] .kicker,html[lang="zh-CN"] .plan{letter-spacing:.05em;text-transform:none}
     html[lang="zh-CN"] .lead,html[lang="zh-CN"] .sub{line-height:1.75}
+  
+    .netflow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;margin:8px 0 34px}
+    .netstep{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:20px 18px}
+    .netstep .n{color:var(--blue);font:700 .72rem/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em}
+    .netstep h4{margin:10px 0 6px;font-size:.98rem;letter-spacing:-.01em}
+    .netstep p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.55}
+    .netarrow{display:grid;place-items:center;color:#3d4a63;font-size:1.05rem}
+    .secgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .secitem{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:22px}
+    .secitem .shield{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:rgba(166,237,193,.1);color:var(--green);font-size:1.05rem;border:1px solid rgba(166,237,193,.22)}
+    .secitem h3{margin:15px 0 7px;font-size:1rem}
+    .secitem p{margin:0;color:var(--muted);font-size:.89rem;line-height:1.62}
+    .neverdo{margin-top:26px;border:1px solid rgba(255,138,138,.22);background:rgba(255,90,90,.05);border-radius:16px;padding:22px 24px}
+    .neverdo h3{margin:0 0 12px;font-size:.95rem;color:#ffb3b3}
+    .neverdo ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 26px;color:var(--muted);font-size:.88rem}
+    .neverdo li:before{content:"\2715";color:#ff8a8a;margin-right:10px;font-weight:700}
+    .netnote{margin:20px 0 0;color:#8490a5;font-size:.78rem}
+    @media(max-width:850px){.netflow{grid-template-columns:1fr;gap:0}.netarrow{transform:rotate(90deg);padding:4px 0}.secgrid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.secgrid{grid-template-columns:1fr}.neverdo ul{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header class="wrap nav">
     <a class="brand" href="#" aria-label="ultraAI home">ultra<span>AI</span></a>
-    <nav class="navlinks" aria-label="Main navigation"><a href="#features" data-en="Features" data-zh="功能">Features</a><a href="#pricing" data-en="Pricing" data-zh="价格">Pricing</a><a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a></nav>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#features" data-en="Features" data-zh="功能">Features</a><a href="#pricing" data-en="Pricing" data-zh="价格">Pricing</a><a href="#network" data-en="Security" data-zh="安全">Security</a><a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a></nav>
     <div class="navactions"><button id="langToggle" class="langbtn" type="button" aria-label="Switch language">中文</button><a class="btn secondary" href="#pricing" data-en="View plan" data-zh="查看方案">View plan</a></div>
   </header>
   <main>
@@ -74,6 +93,33 @@
         <div><div class="kicker" data-en="Simple monthly pricing" data-zh="简单的按月定价">Simple monthly pricing</div><h2 data-en="One Mac. One monthly price." data-zh="一台 Mac，一个月费。">One Mac. One monthly price.</h2><p class="sub" data-en="A clear starting point for individuals and teams that need a dedicated remote Mac. Contact us to confirm hardware specifications, availability and setup before ordering." data-zh="为需要专属远程 Mac 的个人与团队提供清晰的起点。下单前请与我们确认硬件规格、可用性与配置细节。">A clear starting point for individuals and teams that need a dedicated remote Mac. Contact us to confirm hardware specifications, availability and setup before ordering.</p></div>
         <div class="pricecard"><div class="plan" data-en="Dedicated Mac plan" data-zh="专属 Mac 方案">Dedicated Mac plan</div><div class="price" data-en-html="$700 <small>/ month</small>" data-zh-html="$700 <small>/ 月</small>">$700 <small>/ month</small></div><ul class="includes"><li data-en="Dedicated Mac mini allocation" data-zh="专属 Mac mini 分配">Dedicated Mac mini allocation</li><li data-en="Remote development access" data-zh="远程开发访问">Remote development access</li><li data-en="Suitable for macOS development workflows" data-zh="适用于 macOS 开发工作流">Suitable for macOS development workflows</li><li data-en="Setup and onboarding coordination" data-zh="配置与上手协助">Setup and onboarding coordination</li></ul><a class="btn" href="mailto:suppert2026@hotmail.com?subject=ultraAI%20enquiry">Enquire about availability</a><p class="note" data-en="Price and hardware configuration are subject to confirmation." data-zh="价格与硬件配置以最终确认为准。">Price and hardware configuration are subject to confirmation.</p></div>
       </div>
+    </section>
+    <section class="wrap" id="network">
+      <div class="section-head"><div class="kicker" data-en="Network &amp; security" data-zh="网络与安全">Network &amp; security</div><h2 data-en="Your machine, reachable only by you." data-zh="你的机器，只有你能进来。">Your machine, reachable only by you.</h2><p class="sub" data-en="The Mac mini is not placed on the public internet. Access runs through a path we control, and every connection is authenticated before it reaches the machine." data-zh="Mac mini 不会暴露在公网上。访问经过我们控制的通道，每一条连接在抵达机器之前都要先通过身份验证。">The Mac mini is not placed on the public internet. Access runs through a path we control, and every connection is authenticated before it reaches the machine.</p></div>
+      <div class="netflow">
+        <div class="netstep"><div class="n">01</div><h4 data-en="Your device" data-zh="你的设备">Your device</h4><p data-en="Your own laptop, on any network — office, home, hotel or mobile hotspot." data-zh="你自己的电脑，在任何网络环境下 —— 办公室、家里、酒店或手机热点。">Your own laptop, on any network — office, home, hotel or mobile hotspot.</p></div>
+        <div class="netarrow" aria-hidden="true">→</div>
+        <div class="netstep"><div class="n">02</div><h4 data-en="Outbound tunnel" data-zh="出站隧道">Outbound tunnel</h4><p data-en="The connection is opened from inside, not the outside. No inbound port ever listens on the internet." data-zh="连接由内向外发起，而不是由外向内。公网侧没有任何入站端口在监听。">The connection is opened from inside, not the outside. No inbound port ever listens on the internet.</p></div>
+        <div class="netarrow" aria-hidden="true">→</div>
+        <div class="netstep"><div class="n">03</div><h4 data-en="Identity check" data-zh="身份验证">Identity check</h4><p data-en="Every request is authenticated against your identity before it is allowed through." data-zh="每一个请求都要先通过你的身份校验，才会被放行。">Every request is authenticated against your identity before it is allowed through.</p></div>
+        <div class="netarrow" aria-hidden="true">→</div>
+        <div class="netstep"><div class="n">04</div><h4 data-en="Your Mac mini" data-zh="你的 Mac mini">Your Mac mini</h4><p data-en="One physical machine, allocated to you alone and reachable only through that path." data-zh="一台物理机，专属于你，只能通过这条路径访问。">One physical machine, allocated to you alone and reachable only through that path.</p></div>
+      </div>
+      <div class="secgrid">
+        <div class="secitem"><div class="shield">⚿</div><h3 data-en="No inbound ports" data-zh="不开放入站端口">No inbound ports</h3><p data-en="There is no open port on the public internet for an attacker to find, scan or connect to. Nothing is listening from the outside." data-zh="公网上没有可供攻击者发现、扫描或连接的开放端口。外部没有任何监听服务。">There is no open port on the public internet for an attacker to find, scan or connect to. Nothing is listening from the outside.</p></div>
+        <div class="secitem"><div class="shield">◎</div><h3 data-en="Access follows identity" data-zh="访问跟随身份">Access follows identity</h3><p data-en="Access is granted to a verified identity rather than to a shared password, with a second factor required by default." data-zh="授权对象是经过验证的身份，而不是共享密码；默认要求二次验证。">Access is granted to a verified identity rather than to a shared password, with a second factor required by default.</p></div>
+        <div class="secitem"><div class="shield">⇄</div><h3 data-en="Encrypted in transit" data-zh="传输全程加密">Encrypted in transit</h3><p data-en="Traffic between your device and the machine uses modern TLS. No plaintext protocol is exposed to the internet." data-zh="你的设备与机器之间的流量使用现代 TLS 加密。公网侧不暴露任何明文协议。">Traffic between your device and the machine uses modern TLS. No plaintext protocol is exposed to the internet.</p></div>
+        <div class="secitem"><div class="shield">▤</div><h3 data-en="Separate per customer" data-zh="按客户独立隔离">Separate per customer</h3><p data-en="Each customer gets their own machine and their own account. No shared home directory and no shared credentials." data-zh="每位客户拥有独立的机器与独立账号。不共享主目录，也不共享凭据。">Each customer gets their own machine and their own account. No shared home directory and no shared credentials.</p></div>
+        <div class="secitem"><div class="shield">⌘</div><h3 data-en="Key-only login" data-zh="密钥登录">Key-only login</h3><p data-en="Password authentication is disabled on the host. Sign-in requires a key that you hold, not a password that can be guessed." data-zh="主机上已关闭密码认证。登录需要持有你掌握的密钥，而不是可能被猜到的密码。">Password authentication is disabled on the host. Sign-in requires a key that you hold, not a password that can be guessed.</p></div>
+        <div class="secitem"><div class="shield">◷</div><h3 data-en="Access is recorded" data-zh="访问有记录">Access is recorded</h3><p data-en="Authentication events and access decisions are logged, so unusual activity can be identified and reviewed." data-zh="认证事件与访问决策都会留下日志，异常活动可以被发现与追查。">Authentication events and access decisions are logged, so unusual activity can be identified and reviewed.</p></div>
+      </div>
+      <div class="neverdo"><h3 data-en="What we never do" data-zh="我们绝不会做的事">What we never do</h3><ul>
+        <li data-en="Expose the machine on a public IP address" data-zh="把机器直接放在公网 IP 上暴露">Expose the machine on a public IP address</li>
+        <li data-en="Ask you to open a port forward on your router" data-zh="要求你在自己的路由器上做端口转发">Ask you to open a port forward on your router</li>
+        <li data-en="Hand out a shared account used by several customers" data-zh="发放多个客户共用的账号">Hand out a shared account used by several customers</li>
+        <li data-en="Enable password login or store your password" data-zh="开启密码登录，或保存你的密码">Enable password login or store your password</li>
+      </ul></div>
+      <p class="netnote" data-en="The exact access method is confirmed during onboarding and depends on your network and the agreed configuration." data-zh="具体接入方式会在上手阶段确认，取决于你的网络环境与双方约定的配置。">The exact access method is confirmed during onboarding and depends on your network and the agreed configuration.</p>
     </section>
     <section class="wrap faq" id="faq">
       <div class="section-head"><div class="kicker" data-en="Questions" data-zh="疑问解答">Questions</div><h2 data-en="Frequently asked questions" data-zh="常见问题">Frequently asked questions</h2></div>
